@@ -63,17 +63,17 @@ def intermdiate():
 	window2 = Tk()
 	arena = Canvas(window2, width = 500, height = 500, bg = 'white') # generates a canvas of 500px x 500px for the arena
 
-	obstacle_rectangle1 = arena.create_rectangle(350, 50, 400, 200, fill = "red", outline = "red") # creates a obstacle to avoid
-	obstacle_rectangle2 = arena.create_rectangle(150, 200, 300, 250, fill = "red", outline = "red")
-	obstacle_rectangle3 = arena.create_rectangle(400, 250, 500, 300, fill = "red", outline = "red")
-	obstacle_rectangle4 = arena.create_rectangle(0, 350, 250, 400, fill = "red", outline = "red")
-	obstacle_rectangle5 = arena.create_rectangle(400, 350, 450, 400, fill = "red", outline = "red")
-	obstacle_rectangle6 = arena.create_rectangle(0, 0, 100, 200, fill = "red", outline = "red")
+	obstacle_rectangle1 = arena.create_rectangle(350, 50, 400, 200, fill = "red", outline = "black") # creates a obstacle to avoid
+	obstacle_rectangle2 = arena.create_rectangle(150, 200, 300, 250, fill = "red", outline = "black")
+	obstacle_rectangle3 = arena.create_rectangle(400, 250, 500, 300, fill = "red", outline = "black")
+	obstacle_rectangle4 = arena.create_rectangle(0, 350, 250, 400, fill = "red", outline = "black")
+	obstacle_rectangle5 = arena.create_rectangle(400, 350, 450, 400, fill = "red", outline = "black")
+	obstacle_rectangle6 = arena.create_rectangle(0, 0, 100, 200, fill = "red", outline = "black")
 	start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#82FA02") # uses a Hexidecimal code for light green
 
 	arena.pack()
 	speed=0.0001
-	robot = arena.create_oval(50, 500, 30, 480, outline="green", fill="green", width=1)
+	robot = arena.create_oval(50, 500, 30, 480, outline="black", fill="darkgreen", width=1)
 	random_number=random.randint(1,5)
 	
 	if random_number==1:
@@ -160,42 +160,42 @@ def intermdiate():
 		for t in range(0,280):
 		    arena.move(robot , 1 , 0)
 		    arena.update()
-		    time.sleep(0.001)
+		    time.sleep(speed)
 
 		for t in range(0,320):
 		    arena.move(robot , 0 , -1)
 		    arena.update()
-		    time.sleep(0.01)
+		    time.sleep(speed)
 
 		for t in range(0,200):
 		    arena.move(robot , -1 , 0)
 		    arena.update()
-		    time.sleep(0.01)
+		    time.sleep(speed)
 
 		for t in range(0,100):
 		    arena.move(robot , 0 , 1)
 		    arena.update()
-		    time.sleep(0.01)
+		    time.sleep(speed)
 		    
 		for t in range(0,230):
 		    arena.move(robot , 1 , 0)
 		    arena.update()
-		    time.sleep(0.01)
+		    time.sleep(speed)
 		    
 		for t in range(0,50):
 		    arena.move(robot , 0 , -1)
 		    arena.update()
-		    time.sleep(0.01)
+		    time.sleep(speed)
 
 		for t in range(0,130):
 		    arena.move(robot , 1 , 0)
 		    arena.update()
-		    time.sleep(0.01)
+		    time.sleep(speed)
 
 		for t in range(0,190):
 		    arena.move(robot , 0 , -1)
 		    arena.update()
-		    time.sleep(0.01)
+		    time.sleep(speed)
 	elif random_number==5:
 		print "5"
 		#insert path 5 here
@@ -211,10 +211,10 @@ def callback_intermediate(): # calls the intermidiate function  when user clicks
 def callback_advanced():
 	advanced()
 c = Button(window1, text="Advanced", command=callback_advanced) # creates a button that willl take the user to the adanced task
-c.pack(side=BOTTOM)
+c.pack(side=RIGHT)
 b = Button(window1, text="Intermdiate", command=callback_intermediate) #  creates a button that will take the user to the intermidiate task
-b.pack(side=BOTTOM)
+b.pack(side=RIGHT)
 a = Button(window1, text="Basic", command=callback_basic) # creates a button that will take the user to the basic task
-a.pack(side=BOTTOM)
+a.pack(side=RIGHT)
 
 mainloop()
