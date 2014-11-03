@@ -78,7 +78,7 @@ def intermdiate():
 	
 	if random_number==1:
 		print "1"
-		for t in range(0,450):
+		for t in range(0,450): #route bt ade
 		    arena.move(robot , 1 , 0)
 		    arena.update()
 		    time.sleep(speed)
@@ -112,7 +112,7 @@ def intermdiate():
 		    time.sleep(speed)
 	elif random_number==2:
 		print "2"
-		for t in range(0,450):
+		for t in range(0,450): # route bt phil
 		    arena.move(robot ,0.7 , 0)
 		    arena.update()
 		    time.sleep(speed)
@@ -131,7 +131,7 @@ def intermdiate():
 
 	elif random_number==3:
 		print "3"
-		for t in range(0,300):
+		for t in range(0,300): #route by fami
 		    arena.move(robot , 1 , 0)
 		    arena.update()
 		    time.sleep(speed)
@@ -157,7 +157,45 @@ def intermdiate():
 		    time.sleep(speed)
 	elif random_number==4:
 		print "4"
-		#insert path 4 here
+		for t in range(0,280):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(0.001)
+
+		for t in range(0,320):
+		    arena.move(robot , 0 , -1)
+		    arena.update()
+		    time.sleep(0.01)
+
+		for t in range(0,200):
+		    arena.move(robot , -1 , 0)
+		    arena.update()
+		    time.sleep(0.01)
+
+		for t in range(0,100):
+		    arena.move(robot , 0 , 1)
+		    arena.update()
+		    time.sleep(0.01)
+		    
+		for t in range(0,230):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(0.01)
+		    
+		for t in range(0,50):
+		    arena.move(robot , 0 , -1)
+		    arena.update()
+		    time.sleep(0.01)
+
+		for t in range(0,130):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(0.01)
+
+		for t in range(0,190):
+		    arena.move(robot , 0 , -1)
+		    arena.update()
+		    time.sleep(0.01)
 	elif random_number==5:
 		print "5"
 		#insert path 5 here
