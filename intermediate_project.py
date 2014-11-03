@@ -74,7 +74,7 @@ def intermdiate():
 	start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#82FA02") # uses a Hexidecimal code for light green
 
 	random_number=randint(1,5)
-	if random_number=1:
+	if random_number==1:
 		for t in range(0,450):
 		    arena.move(robot , 1 , 0)
 		    arena.update()
@@ -107,13 +107,17 @@ def intermdiate():
 		    arena.move(robot , 0 , -0.45)
 		    arena.update()
 		    time.sleep(speed)
-	if random_number=2:
-		#insert path 2 here
-	if random_number=3:
+	elif random_number==2:
+		print "temp" #this need to be removed after path completed
 		#insert path 3 here
-	if random_number=4:
+	elif random_number==3:
+		print "temp"
+		#insert path 3 here
+	elif random_number==4:
+		print "temp"
 		#insert path 4 here
-	if random_number=5:
+	elif random_number==5:
+		print "temp"
 		#insert path 5 here
 def advanced():
 	print "this is not finshed"
