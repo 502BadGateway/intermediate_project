@@ -1,17 +1,17 @@
 from Tkinter import *
-import time
+import time # imports the time moduale
 master = Tk()
-def callback_basic():
+def callback_basic(): # calls the bacis function when the user clicks the button
     basic()
-def callback_intermediate():
+def callback_intermediate(): # calls the intermidiate function  when user clicks the button 
 	intermdiate() 
 def callback_advanced():
 	print ("Advanced modual not finshed")
-a = Button(master, text="Basic", command=callback_basic)
+a = Button(master, text="Basic", command=callback_basic) # creates a button that will take the user to the basic task
 a.pack()
-b = Button(master, text="Intermdiate", command=callback_intermediate)
+b = Button(master, text="Intermdiate", command=callback_intermediate) #  creates a button that will take the user to the intermidiate task
 b.pack()
-c = Button(master, text="Advanced", command=callback_advanced)
+c = Button(master, text="Advanced", command=callback_advanced) # creates a button that willl take the user to the adanced task
 c.pack()
 def basic():
 	window = Tk() # generates a window 
@@ -37,7 +37,7 @@ def basic():
 	arena.pack()
 	arena.update_idletasks()
 
-	for t in range(0,450):
+	for t in range(0,450): # moves the robot right 450 pixals 
 		arena.move(robot , 1 , 0)
     	arena.update()
     	time.sleep(0.1)
