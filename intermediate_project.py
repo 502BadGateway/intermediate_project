@@ -109,7 +109,23 @@ def intermdiate():
 		    time.sleep(speed)
 	elif random_number==2:
 		print "temp" #this need to be removed after path completed
-		#insert path 3 here
+		for t in range(0,450):
+		    arena.move(robot ,0.7 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot ,0 , -0.57)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot,0.3,0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot, 0, -0.48)
+		    arena.update()
+		    time.sleep(speed)
+
 	elif random_number==3:
 		print "temp"
 		#insert path 3 here
