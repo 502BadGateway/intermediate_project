@@ -78,7 +78,7 @@ def intermdiate():
 	
 	if random_number==1:
 		print "1"
-		for t in range(0,450): #route bt ade
+		for t in range(0,450): #route by ade
 		    arena.move(robot , 1 , 0)
 		    arena.update()
 		    time.sleep(speed)
@@ -112,7 +112,7 @@ def intermdiate():
 		    time.sleep(speed)
 	elif random_number==2:
 		print "2"
-		for t in range(0,450): # route bt phil
+		for t in range(0,450): # route by phil
 		    arena.move(robot ,0.7 , 0)
 		    arena.update()
 		    time.sleep(speed)
