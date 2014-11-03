@@ -55,13 +55,11 @@ def basic():
 	    arena.move(robot , 0 , -0.45)
 	    arena.update()
 	    time.sleep(speed)
-	print robot (fill = 'red')
 	#robot_front, robot_back1, robot_back2 = arena.coords(robot)
 	#print robot_front
 	window2.mainloop() # runs everything
 window1= Tk()
 def intermdiate():
-	print "this is not finished yet"
 	window2 = Tk()
 	arena = Canvas(window2, width = 500, height = 500, bg = 'white') # generates a canvas of 500px x 500px for the arena
 
@@ -73,8 +71,13 @@ def intermdiate():
 	obstacle_rectangle6 = arena.create_rectangle(0, 0, 100, 200, fill = "red", outline = "red")
 	start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#82FA02") # uses a Hexidecimal code for light green
 
-	random_number=randint(1,5)
+	arena.pack()
+	speed=0.0001
+	robot = arena.create_oval(50, 500, 30, 480, outline="green", fill="green", width=1)
+	random_number=random.randint(1,5)
+	
 	if random_number==1:
+		print "1"
 		for t in range(0,450):
 		    arena.move(robot , 1 , 0)
 		    arena.update()
@@ -108,7 +111,7 @@ def intermdiate():
 		    arena.update()
 		    time.sleep(speed)
 	elif random_number==2:
-		print "temp" #this need to be removed after path completed
+		print "2"
 		for t in range(0,450):
 		    arena.move(robot ,0.7 , 0)
 		    arena.update()
@@ -127,14 +130,38 @@ def intermdiate():
 		    time.sleep(speed)
 
 	elif random_number==3:
-		print "temp"
-		#insert path 3 here
+		print "3"
+		for t in range(0,300):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(speed)
+
+		for t in range(0,200):
+		    arena.move(robot , 0 , -1)
+		    arena.update()
+		    time.sleep(speed)
+
+		for t in range(0,210):
+		    arena.move(robot , -1 , 0)
+		    arena.update()
+		    time.sleep(speed)
+
+		for t in range(0,250):
+		    arena.move(robot , 0 , -1)
+		    arena.update()
+		    time.sleep(speed)
+
+		for t in range(0,350):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(speed)
 	elif random_number==4:
-		print "temp"
+		print "4"
 		#insert path 4 here
 	elif random_number==5:
-		print "temp"
+		print "5"
 		#insert path 5 here
+		
 def advanced():
 	print "this is not finshed"
 #key = Canvas(window, width = 500, height = 100, bg = 'grey') # generates a canvas for our key and UI area
