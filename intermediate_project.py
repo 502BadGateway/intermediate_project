@@ -12,7 +12,7 @@ def traffic_light(): #Danny
             print "GREEN!"
             
 def basic():
-	window2 = Tk()
+	window2 = Toplevel()
 	arena = Canvas(window2, width = 500, height = 500, bg = 'white') # generates a canvas of 500px x 500px for the arena
 
 	obstacle_rectangle1 = arena.create_rectangle(350, 50, 400, 200, fill = "red", outline = "red") # creates a obstacle to avoid
@@ -24,8 +24,8 @@ def basic():
 	start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#82FA02") # uses a Hexidecimal code for light green
 
 	#flag gif
-	#gif1 = PhotoImage(file = 'flag.gif')
-	#arena.create_image(500, 0, image = gif1, anchor = NE,)
+	gif1 = PhotoImage(file = 'flag.gif')
+	arena.create_image(500, 0, image = gif1, anchor = NE,)
 
 	#create triangle robot
 	#robot = arena.create_polygon([(10, 450), (10, 500), (40, 475)], fill="#366605")
@@ -70,7 +70,7 @@ def basic():
 	window2.mainloop() # runs everything
 window1= Tk()
 def intermdiate():
-	window2 = Tk()
+	window2 = Toplevel()
 	arena = Canvas(window2, width = 500, height = 500, bg = 'white') # generates a canvas of 500px x 500px for the arena
 
 	obstacle_rectangle1 = arena.create_rectangle(350, 50, 400, 200, fill = "red", outline = "black") # creates a obstacle to avoid
@@ -85,6 +85,8 @@ def intermdiate():
 	speed=0.01
 	robot = arena.create_oval(50, 500, 30, 480, outline="black", fill="darkgreen", width=1)
 	random_number=random.randint(0,6) 
+	gif1 = PhotoImage(file = 'flag.gif')
+	arena.create_image(500, 0, image = gif1, anchor = NE,)
 	
 	if random_number==1:
 		print "1"
@@ -289,6 +291,7 @@ def intermdiate():
 		    traffic_light()
 		    
 	elif random_number==6: #route byb ade
+		print "6"
 		for t in range(0,450):
 		    arena.move(robot , 1 , 0)
 		    arena.update()
@@ -409,7 +412,7 @@ def intermdiate():
 		    time.sleep(speed)
 		    traffic_light()
 
-def advanced():
+def advanced(): #all code bellow writen by phil
 	print "this is not finshed"
 #key = Canvas(window, width = 500, height = 100, bg = 'grey') # generates a canvas for our key and UI area
 #key.pack()
