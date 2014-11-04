@@ -6,6 +6,7 @@ def traffic_light(): #Danny
         traffic_light = random.randint(0,1000)
         if (traffic_light < 5):
             #Change traffic_light.gif_green to traffic_light_red.gif
+
             print "RED!"
             time.sleep(5)
             #Change traffic_light.gif_red to traffic_light_green.gif
@@ -31,6 +32,7 @@ def basic():
 	#robot = arena.create_polygon([(10, 450), (10, 500), (40, 475)], fill="#366605")
 	robot = arena.create_oval(50, 500, 30, 480, outline="green", fill="green", width=1)
 	arena.pack()
+
 	arena.update_idletasks()
 	speed=0.1
 	for t in range(0,450):
@@ -72,6 +74,7 @@ window1= Tk()
 def intermdiate():
 	window2 = Toplevel()
 	arena = Canvas(window2, width = 500, height = 500, bg = 'white') # generates a canvas of 500px x 500px for the arena
+	key = Canvas(window2, width =  500, height = 200, bg = "grey")# generates the panel the key is on
 
 	obstacle_rectangle1 = arena.create_rectangle(350, 50, 400, 200, fill = "red", outline = "black") # creates a obstacle to avoid
 	obstacle_rectangle2 = arena.create_rectangle(150, 200, 300, 250, fill = "red", outline = "black")
@@ -82,8 +85,11 @@ def intermdiate():
 	start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#82FA02") # uses a Hexidecimal code for light green
 
 	arena.pack()
+	key.pack()
 	speed=0.01
 	robot = arena.create_oval(50, 500, 30, 480, outline="black", fill="darkgreen", width=1)
+	key_panel = PhotoImage(file = 'advance_key_green.gif')
+	arena.create_image(0,500, image = key_panel, ancher = SW)
 	random_number=random.randint(0,6) 
 	gif1 = PhotoImage(file = 'flag.gif')
 	arena.create_image(500, 0, image = gif1, anchor = NE,)
