@@ -60,6 +60,13 @@ def basic():
     window2.mainloop() # runs everything
 window1= Tk()     #Whats this doing here? TODO
 def intermdiate():
+
+    move=True
+    def stop():
+        move=False
+    def go():
+        move=True
+
     window2 = Tk()
     arena = Canvas(window2, width = 500, height = 500, bg = 'white') # generates a canvas of 500px x 500px for the arena
     obstacle_rectangle1 = arena.create_rectangle(350, 50, 400, 200, fill = "red", outline = "black") # creates a obstacle to avoid
@@ -69,9 +76,12 @@ def intermdiate():
     obstacle_rectangle5 = arena.create_rectangle(400, 350, 450, 400, fill = "red", outline = "black")
     obstacle_rectangle6 = arena.create_rectangle(0, 0, 100, 200, fill = "red", outline = "black")
     start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#82FA02") # uses a Hexidecimal code for light green
-
     arena.pack()
-    speed=0.0001
+    btn_stop =Button(window2, text="STOP", command=stop)
+    btn_stop.pack(side=LEFT)
+    btn_go = Button(window2, text="Go", command=go)
+    btn_go.pack(side=RIGHT)
+    speed=0.1
     robot = arena.create_oval(50, 500, 30, 480, outline="black", fill="darkgreen", width=1)
     random_number=random.randint(1,5)
 
