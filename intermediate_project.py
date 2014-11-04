@@ -72,7 +72,7 @@ def intermdiate():
 	start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#82FA02") # uses a Hexidecimal code for light green
 
 	arena.pack()
-	speed=0.0001
+	speed=0.01
 	robot = arena.create_oval(50, 500, 30, 480, outline="black", fill="darkgreen", width=1)
 	random_number=random.randint(1,5)
 	
