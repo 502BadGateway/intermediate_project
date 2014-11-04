@@ -74,11 +74,11 @@ def intermdiate():
 	arena.pack()
 	speed=0.01
 	robot = arena.create_oval(50, 500, 30, 480, outline="black", fill="darkgreen", width=1)
-	random_number=random.randint(0,5) 
+	random_number=random.randint(0,6) 
 	
 	if random_number==1:
 		print "1"
-		for t in range(0,450): #route bt ade
+		for t in range(0,450): #route by ade
 		    arena.move(robot , 1 , 0)
 		    arena.update()
 		    time.sleep(speed)
@@ -112,7 +112,7 @@ def intermdiate():
 		    time.sleep(speed)
 	elif random_number==2:
 		print "2"
-		for t in range(0,450): # route bt phil
+		for t in range(0,450): # route by phil
 		    arena.move(robot ,0.7 , 0)
 		    arena.update()
 		    time.sleep(speed)
@@ -234,6 +234,87 @@ def intermdiate():
 		    time.sleep(speed)
 		for t in range(0,160):
 		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(speed)
+	elif random_number==6: #route byb ade
+		for t in range(0,450):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0 , -0.35)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , -0.3 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0 , -0.23)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0.14 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0 , -0.45)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , -0.2 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0 , 0.55)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , -0.45 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0 , -0.2)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0.475 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , -0.06 , 0.09)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0.17 , 0.09)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , -0.28 , 0.2)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0.28 , -0.2)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , -0.17 , -0.09)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0.06 , -0.09)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0 , 0.09)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0.3 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,450):
+		    arena.move(robot , 0 , -0.44)
 		    arena.update()
 		    time.sleep(speed)
 
