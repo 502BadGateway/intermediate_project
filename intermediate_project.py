@@ -22,7 +22,7 @@ def basic():
 	robot = arena.create_oval(50, 500, 30, 480, outline="green", fill="green", width=1)
 	arena.pack()
 	arena.update_idletasks()
-	speed=0.0001
+	speed=0.1
 	for t in range(0,450):
 	    arena.move(robot , 1 , 0)
 	    arena.update()
@@ -72,9 +72,9 @@ def intermdiate():
 	start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#82FA02") # uses a Hexidecimal code for light green
 
 	arena.pack()
-	speed=0.0001
+	speed=0.01
 	robot = arena.create_oval(50, 500, 30, 480, outline="black", fill="darkgreen", width=1)
-	random_number=random.randint(1,5)
+	random_number=random.randint(0,5) 
 	
 	if random_number==1:
 		print "1"
@@ -196,10 +196,47 @@ def intermdiate():
 		    arena.move(robot , 0 , -1)
 		    arena.update()
 		    time.sleep(speed)
-	elif random_number==5:
+
+	elif random_number==5: #Dannys Route
 		print "5"
-		#insert path 5 here
-		
+		for t in range(0,280):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,320):
+		    arena.move(robot , 0 , -1)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,200):
+		    arena.move(robot , -1 , 0)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,150):
+		    arena.move(robot , 0 , 1)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,350):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(speed)		    
+		for t in range(0,100):
+		    arena.move(robot , 0 , 1)
+		    arena.update()
+		    time.sleep(speed)                    
+		for t in range(0,150):
+		    arena.move(robot , -1 , 0)
+		    arena.update()
+		    time.sleep(speed)
+
+		for t in range(0,400):
+		    arena.move(robot , 0 , -1)
+		    arena.update()
+		    time.sleep(speed)
+		for t in range(0,160):
+		    arena.move(robot , 1 , 0)
+		    arena.update()
+		    time.sleep(speed)
+
 def advanced():
 	print "this is not finshed"
 #key = Canvas(window, width = 500, height = 100, bg = 'grey') # generates a canvas for our key and UI area
