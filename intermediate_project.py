@@ -1,6 +1,16 @@
 from Tkinter import *
 import time # imports the time moduale
 import random
+
+def traffic_light(): #Danny
+        traffic_light = random.randint(0,1000)
+        if (traffic_light < 5):
+            #Change traffic_light.gif_green to traffic_light_red.gif
+            print "RED!"
+            time.sleep(5)
+            #Change traffic_light.gif_red to traffic_light_green.gif
+            print "GREEN!"
+            
 def basic():
 	window2 = Tk()
 	arena = Canvas(window2, width = 500, height = 500, bg = 'white') # generates a canvas of 500px x 500px for the arena
@@ -82,52 +92,64 @@ def intermdiate():
 		    arena.move(robot , 1 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot , 0 , -0.335)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot , -0.8 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot , 0 , -0.4)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot , 0.42 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot , 0 , 0.155)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot , 0.35 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot , 0 , -0.45)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 	elif random_number==2:
 		print "2"
 		for t in range(0,450): # route by phil
 		    arena.move(robot ,0.7 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot ,0 , -0.57)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot,0.3,0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 		for t in range(0,450):
 		    arena.move(robot, 0, -0.48)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 
 	elif random_number==3:
 		print "3"
@@ -135,37 +157,45 @@ def intermdiate():
 		    arena.move(robot , 1 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 
 		for t in range(0,200):
 		    arena.move(robot , 0 , -1)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 
 		for t in range(0,210):
 		    arena.move(robot , -1 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 
 		for t in range(0,250):
 		    arena.move(robot , 0 , -1)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 
 		for t in range(0,350):
 		    arena.move(robot , 1 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
+		    
 	elif random_number==4:
 		print "4"
 		for t in range(0,280):
 		    arena.move(robot , 1 , 0)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 
 		for t in range(0,320):
 		    arena.move(robot , 0 , -1)
 		    arena.update()
 		    time.sleep(speed)
+		    traffic_light()
 
 		for t in range(0,200):
 		    arena.move(robot , -1 , 0)
